@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header h1 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.header p {
+    color: #7f8c8d;
+    margin-bottom: 32px;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    border: 2px dashed #bdc3c7;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    min-height: 160px;
+}
+
+.file-label:hover {
+    border-color: #3498db;
+    background: #ebf3fd;
+    transform: translateY(-2px);
+}
+
+.file-icon {
+    font-size: 2rem;
+    color: #7f8c8d;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.file-label:hover .file-icon {
+    color: #3498db;
+}
+
+#file-name {
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.upload-text {
+    color: #95a5a6;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+.btn, .btn-secondary {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    background: #3498db;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: 1px solid #d5dbdb;
+}
+
+.btn-secondary:hover {
+    background: #d5dbdb;
+    transform: translateY(-1px);
+}
+
+.message {
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: left;
+    border-left: 4px solid;
+}
+
+.message.error {
+    background: #fdf2f2;
+    color: #e74c3c;
+    border-left-color: #e74c3c;
+}
+
+.message.success {
+    background: #f0f9f0;
+    color: #27ae60;
+    border-left-color: #27ae60;
+}
+
+.file-info {
+    margin-top: 20px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.file-info code {
+    background: #ecf0f1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'SF Mono', Consolas, monospace;
+    font-size: 0.85rem;
+    color: #2c3e50;
+    word-break: break-all;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 32px 24px;
+        margin: 16px;
+    }
+    
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .file-label {
+        padding: 24px 16px;
+        min-height: 140px;
+    }
+}
+
+/* Simple focus states */
+.file-label:focus-within,
+.btn:focus,
+.btn-secondary:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}

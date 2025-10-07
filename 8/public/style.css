@@ -1,0 +1,106 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #29aee7d9, #46a5ca, #1a8fc1);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+
+.container {
+  background: rgba(154, 2, 255, 0.509);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  width: 90%;
+  max-width: 420px;
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 4rem;
+  margin: 25px 0;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(255,255,255,0.3);
+  transition: transform 0.3s, color 0.3s;
+}
+
+#counter.pulse {
+  transform: scale(1.2);
+  color: #ff0000;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.buttons button {
+  flex: 1;
+  min-width: 100px;
+  margin: 5px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Button colors */
+#increase {
+  background: linear-gradient(135deg, #18e91f, #81c784);
+  color: white;
+}
+#decrease {
+  background: linear-gradient(135deg, #f32f21, #e57373);
+  color: white;
+}
+#reset {
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+  color: white;
+}
+
+/* Button hover & active effects */
+.buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+  h2 {
+    font-size: 3rem;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons button {
+    width: 100%;
+  }
+}

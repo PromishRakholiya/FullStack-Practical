@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  color: #333;
+
+}
+
+header {
+  padding: 2rem;
+  background: #ffffffbb;
+  border-bottom: 2px solid #54d3dca2;
+}
+
+main {
+  margin: 3rem auto;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #45a049;
+}
+

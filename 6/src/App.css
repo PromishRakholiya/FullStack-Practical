@@ -1,0 +1,9 @@
+/* General Body Styles */
+body {
+  font-family: 'Inter', Arial, sans-serif; /* Using 'Inter' as specified in your App.jsx comment */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Tailwind classes in App.jsx handle background, min-height, flex properties */
+}
+
